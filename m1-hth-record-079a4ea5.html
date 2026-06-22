@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hth · 站点杂志</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Georgia', 'Times New Roman', 'Songti SC', serif;
+            background: #f5f3ef;
+            color: #2d2a27;
+            line-height: 1.7;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        a {
+            color: #c84b31;
+            text-decoration: none;
+            transition: border-color 0.25s;
+            border-bottom: 1px solid transparent;
+        }
+        a:hover {
+            border-bottom-color: #c84b31;
+        }
+        .hero {
+            background: linear-gradient(140deg, #1f1c1a 0%, #2e2925 70%, #3b3530 100%);
+            color: #e9e2d8;
+            padding: 5rem 2rem 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #c84b31 40%, #c84b31 60%, transparent);
+        }
+        .hero h1 {
+            font-weight: 400;
+            font-size: 3.2rem;
+            letter-spacing: 0.15em;
+            margin-bottom: 0.4rem;
+            text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+        }
+        .hero .byline {
+            font-size: 1rem;
+            opacity: 0.65;
+            letter-spacing: 0.3em;
+            margin-top: 0.2rem;
+            font-style: italic;
+        }
+        .hero .sub {
+            margin-top: 1.8rem;
+            max-width: 620px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 1.05rem;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+        .content {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 3.5rem 2rem 4rem;
+            background: #faf8f5;
+            box-shadow: 0 0 30px rgba(0,0,0,0.03);
+            flex: 1;
+        }
+        .section {
+            margin-bottom: 2.8rem;
+        }
+        .section:last-of-type {
+            margin-bottom: 0;
+        }
+        .section h2 {
+            font-weight: 400;
+            font-size: 1.6rem;
+            letter-spacing: 0.04em;
+            border-left: 3px solid #c84b31;
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+            color: #2d2a27;
+        }
+        .section p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+            text-align: justify;
+        }
+        .section p:last-child {
+            margin-bottom: 0;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 6px;
+            padding: 1.6rem 2rem;
+            margin-top: 1.2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+            border: 1px solid #e7e1d8;
+        }
+        .card p {
+            font-size: 0.98rem;
+            margin-bottom: 0.5rem;
+            color: #3b3530;
+        }
+        .card .tag {
+            display: inline-block;
+            background: #c84b31;
+            color: #fff;
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            padding: 0.2rem 0.9rem;
+            border-radius: 20px;
+            margin-bottom: 0.8rem;
+        }
+        .faq-item {
+            margin-bottom: 1.2rem;
+        }
+        .faq-item strong {
+            display: block;
+            font-weight: 600;
+            color: #1f1c1a;
+            margin-bottom: 0.2rem;
+            font-size: 1rem;
+        }
+        .faq-item p {
+            margin-left: 0.2rem;
+            font-size: 0.98rem;
+            color: #4a423c;
+        }
+        .footer-note {
+            margin-top: 3.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #ddd6cc;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #6b6157;
+            letter-spacing: 0.02em;
+        }
+        .footer-note a {
+            border-bottom: 1px solid #c84b31;
+        }
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2.2rem;
+                letter-spacing: 0.1em;
+            }
+            .hero {
+                padding: 3rem 1.2rem 2.8rem;
+            }
+            .content {
+                padding: 2.2rem 1.2rem;
+            }
+            .section h2 {
+                font-size: 1.3rem;
+            }
+            .card {
+                padding: 1.2rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>hth</h1>
+    <div class="byline">—— 一个值得了解的站点轮廓 ——</div>
+    <div class="sub">
+        在信息流转的间隙里，有些页面提供着稳定的参照。<br>
+        这里所讨论的，正是一个能够被反复审视的坐标。
+    </div>
+</div>
+
+<div class="content">
+
+    <div class="section">
+        <h2>站点的背景与定位</h2>
+        <p>
+            <a href="https://m1-hth.com">hth</a> 并非一个骤然出现的名字。它的结构经过了一段时间的沉淀，
+            在内容与交互之间维持着一种平实的节奏。从最初的框架到现在的形态，
+            每一次调整都指向同一个意图：让访问者可以自然且清晰地找到自己所需的信息。
+            这种克制让页面本身变得可靠，不依靠花哨的修辞，而是依靠连贯的叙事。
+        </p>
+        <p>
+            很多人第一次接触到这个域名时，会产生一种“它应该属于某个特定领域”的直觉。
+            实际上，它的覆盖范围比想象中更宽泛——既有基础的功能说明，
+            也包含对常见疑问的梳理。站点并没有过度定义自己，而是留出了足够的空间让使用者自行判断。
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>从结构看可信</h2>
+        <p>
+            一个页面的可信程度，往往体现在细节里。<a href="https://m1-hth.com">hth</a> 的导航层级并不复杂，
+            但每一层都经过考量：没有冗余的跳转，也没有刻意填充的内容。
+            这种简洁不是缺少信息，而是过滤后的呈现。在长期运营中，
+            这种设计让站点保持了较好的稳定性——用户不容易迷失，也不容易产生疲劳。
+        </p>
+        <p>
+            此外，站点的反馈机制也值得留意。无论是页面加载速度还是链接的响应，
+            都维持在一种可预期的范围之内。对于需要反复查阅的人来说，
+            这种可预期本身就是一种信任的基础。
+        </p>
+        <div class="card">
+            <span class="tag">特点</span>
+            <p>▸ 结构清晰，重点突出，减少无关干扰</p>
+            <p>▸ 内容更新保持克制，避免信息过载</p>
+            <p>▸ 无强制弹窗或诱导性组件，尊重访问者节奏</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>常见疑问摘要</h2>
+        <div class="faq-item">
+            <strong>这个站点主要提供什么？</strong>
+            <p>它更像一个整合性的信息点，围绕特定主题组织内容，方便使用者快速理解背景与核心逻辑。</p>
+        </div>
+        <div class="faq-item">
+            <strong>为什么选择 <a href="https://m1-hth.com">hth</a> 作为域名？</strong>
+            <p>域名本身简洁易记，且与站点内容的主题索引形成自然对应，不依赖额外的解释就能建立联想。</p>
+        </div>
+        <div class="faq-item">
+            <strong>内容的可信度如何保证？</strong>
+            <p>站点采用克制的编辑方式，不追逐热点，不夸大表述。每一条信息都经过基本的事实核对与上下文校验。</p>
+        </div>
+    </div>
+
+    <div class="footer-note">
+        如果你对这个站点的面貌感到好奇，不妨直接前往 <a href="https://m1-hth.com">hth</a> 亲自浏览。
+        页面本身会告诉你比任何描述都更多的东西。
+    </div>
+
+</div>
+
+</body>
+</html>
